@@ -1,0 +1,659 @@
+/* assets/css/reports.css */
+
+/* Report List Styles */
+.aiwinlab-reports-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.reports-filters {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.reports-filters form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #333;
+}
+
+.filter-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 10px 15px;
+    background-color: var(--ai-winlab-primary, #4a6cf7);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #3a59d9;
+}
+
+.reset-btn {
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    color: #666;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.reports-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.report-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.report-header {
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.report-title {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.report-title a {
+    color: var(--ai-winlab-primary, #4a6cf7);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.report-title a:hover {
+    color: var(--ai-winlab-secondary, #8e44ad);
+}
+
+.report-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    color: #666;
+}
+
+.report-meta i {
+    margin-right: 5px;
+}
+
+.report-summary {
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.report-actions {
+    padding: 0 20px 20px 20px;
+}
+
+.view-report-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: var(--ai-winlab-primary, #4a6cf7);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.view-report-btn:hover {
+    background-color: #3a59d9;
+    color: white;
+}
+
+.reports-pagination {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.reports-pagination .page-numbers {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 4px;
+    background-color: white;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.reports-pagination .page-numbers.current {
+    background-color: var(--ai-winlab-primary, #4a6cf7);
+    color: white;
+}
+
+.reports-pagination .page-numbers:hover:not(.current) {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.no-reports {
+    background-color: white;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    grid-column: 1 / -1;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.no-reports-icon {
+    font-size: 48px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.no-reports h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+.no-reports p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.create-report-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--ai-winlab-primary, #4a6cf7);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.create-report-btn:hover {
+    background-color: #3a59d9;
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .reports-filters form {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .reports-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Single Report Styles */
+.aiwinlab-report {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.aiwinlab-report .report-header {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, var(--ai-winlab-primary, #4a6cf7) 0%, var(--ai-winlab-secondary, #8e44ad) 100%);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.aiwinlab-report .report-logo {
+    margin-right: 30px;
+}
+
+.aiwinlab-report .report-logo img {
+    width: 80px;
+    height: auto;
+}
+
+.aiwinlab-report .report-title {
+    flex: 1;
+}
+
+.aiwinlab-report .report-title h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.aiwinlab-report .report-title h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.aiwinlab-report .report-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.aiwinlab-report .meta-item {
+    display: flex;
+    align-items: center;
+}
+
+.aiwinlab-report .meta-item i {
+    margin-right: 8px;
+}
+
+.aiwinlab-report .report-navigation {
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+}
+
+.aiwinlab-report .report-navigation ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 25px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.aiwinlab-report .report-navigation a {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.aiwinlab-report .report-navigation a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--ai-winlab-primary, #4a6cf7);
+    transition: width 0.3s ease;
+}
+
+.aiwinlab-report .report-navigation a:hover,
+.aiwinlab-report .report-navigation a.active {
+    color: var(--ai-winlab-primary, #4a6cf7);
+}
+
+.aiwinlab-report .report-navigation a:hover:after,
+.aiwinlab-report .report-navigation a.active:after {
+    width: 100%;
+}
+
+.aiwinlab-report .report-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.report-section {
+    margin-bottom: 50px;
+    scroll-margin-top: 120px;
+}
+
+.report-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-header {
+    border-bottom: 2px solid var(--ai-winlab-primary, #4a6cf7);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+}
+
+.section-header h2 {
+    color: var(--ai-winlab-primary, #4a6cf7);
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.section-content {
+    color: #333;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.section-content p {
+    margin-bottom: 20px;
+}
+
+.section-content ul, 
+.section-content ol {
+    margin-bottom: 20px;
+    padding-left: 25px;
+}
+
+.section-content li {
+    margin-bottom: 10px;
+}
+
+.section-content strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.opportunities-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.opportunity-radar-chart {
+    width: 100%;
+    height: 400px;
+}
+
+.opportunities-list {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.roi-chart-container {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 30px;
+}
+
+.roi-explanation {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.solutions-table-container {
+    overflow-x: auto;
+}
+
+.solutions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.solutions-table th,
+.solutions-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.solutions-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    color: #333;
+}
+
+.solutions-table tr:last-child td {
+    border-bottom: none;
+}
+
+.solutions-table tr:hover td {
+    background-color: #f9f9f9;
+}
+
+.aiwinlab-report .report-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.aiwinlab-report .download-btn,
+.aiwinlab-report .consult-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.aiwinlab-report .download-btn {
+    background-color: var(--ai-winlab-primary, #4a6cf7);
+    color: white;
+}
+
+.aiwinlab-report .download-btn:hover {
+    background-color: #3a59d9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(74, 108, 247, 0.2);
+}
+
+.aiwinlab-report .consult-btn {
+    background-color: var(--ai-winlab-secondary, #8e44ad);
+    color: white;
+}
+
+.aiwinlab-report .consult-btn:hover {
+    background-color: #7d3c98;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(142, 68, 173, 0.2);
+}
+
+.aiwinlab-report .download-btn i,
+.aiwinlab-report .consult-btn i {
+    margin-right: 8px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--ai-winlab-primary, #4a6cf7);
+}
+
+.close-modal {
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+    color: #f44336;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.modal-body p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.success-message {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.success-message i {
+    font-size: 48px;
+    color: var(--ai-winlab-accent, #00c9a7);
+    margin-bottom: 20px;
+}
+
+.success-message h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.success-message p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .opportunities-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .opportunity-radar-chart {
+        height: 350px;
+    }
+    
+    .aiwinlab-report .report-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .aiwinlab-report .report-logo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .aiwinlab-report .report-actions {
+        flex-direction: column;
+    }
+    
+    .aiwinlab-report .download-btn,
+    .aiwinlab-report .consult-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .aiwinlab-report .report-content {
+        padding: 20px;
+    }
+    
+    .section-header h2 {
+        font-size: 20px;
+    }
+    
+    .aiwinlab-report .report-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

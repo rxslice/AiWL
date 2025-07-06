@@ -1,0 +1,208 @@
+/* admin/css/admin.css */
+
+/* Admin Page Styles */
+.aiwinlab-admin-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.aiwinlab-admin-logo {
+    margin-right: 15px;
+}
+
+.aiwinlab-admin-logo img {
+    width: 48px;
+    height: auto;
+}
+
+.aiwinlab-admin-title h1 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #4a6cf7;
+}
+
+.aiwinlab-admin-title p {
+    margin-top: 0;
+    color: #666;
+}
+
+/* Settings Form Styles */
+.form-table th {
+    padding-top: 15px;
+}
+
+.aiwinlab-api-key-field {
+    display: flex;
+    align-items: center;
+}
+
+.aiwinlab-api-key-field input {
+    flex: 1;
+}
+
+.aiwinlab-api-key-toggle {
+    background: none;
+    border: none;
+    color: #0073aa;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.aiwinlab-api-key-toggle:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#aiwinlab-test-api {
+    margin-left: 10px;
+}
+
+#aiwinlab-api-test-result {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+#aiwinlab-api-test-result .success {
+    color: #46b450;
+}
+
+#aiwinlab-api-test-result .error {
+    color: #dc3232;
+}
+
+#aiwinlab-api-test-result .testing {
+    color: #666;
+}
+
+/* Analytics Dashboard Styles */
+.aiwinlab-analytics-dashboard {
+    margin-top: 20px;
+}
+
+.aiwinlab-analytics-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.aiwinlab-analytics-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.aiwinlab-analytics-card .card-title {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.aiwinlab-analytics-card .card-value {
+    color: #4a6cf7;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.aiwinlab-analytics-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.aiwinlab-analytics-chart {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.aiwinlab-analytics-chart h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #23282d;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Tab Navigation */
+.aiwinlab-tab-nav {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.aiwinlab-tab-nav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #666;
+    border-bottom: 3px solid transparent;
+    margin-right: 5px;
+}
+
+.aiwinlab-tab-nav a.active {
+    border-bottom-color: #4a6cf7;
+    color: #4a6cf7;
+}
+
+.aiwinlab-tab-content {
+    display: none;
+}
+
+.aiwinlab-tab-content.active {
+    display: block;
+}
+
+/* Help & Documentation Styles */
+.aiwinlab-help-content {
+    max-width: 1000px;
+}
+
+.aiwinlab-help-section {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.aiwinlab-help-section h2 {
+    margin-top: 0;
+    color: #4a6cf7;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.aiwinlab-help-section h3 {
+    color: #23282d;
+    font-size: 16px;
+}
+
+.aiwinlab-faq-item {
+    margin-bottom: 25px;
+}
+
+.aiwinlab-faq-item h3 {
+    margin-bottom: 10px;
+}
+
+.aiwinlab-faq-item p {
+    margin-top: 0;
+}
+
+/* Responsive fixes */
+@media screen and (max-width: 782px) {
+    .aiwinlab-analytics-overview {
+        grid-template-columns: 1fr;
+    }
+    
+    .aiwinlab-analytics-charts {
+        grid-template-columns: 1fr;
+    }
+}

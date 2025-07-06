@@ -1,0 +1,14 @@
+<!-- assets/images/ai-winlab-logo.svg -->
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="120" cy="120" r="120" fill="url(#paint0_linear)"/>
+  <path d="M65 85L95 155H35L65 85Z" fill="white"/>
+  <path d="M122.5 85H175L150 155H97.5L122.5 85Z" fill="white"/>
+  <path d="M180 85H190L175 155H165L180 85Z" fill="white"/>
+  <circle cx="175" cy="75" r="10" fill="white"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="240" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4A6CF7"/>
+      <stop offset="1" stop-color="#8E44AD"/>
+    </linearGradient>
+  </defs>
+</svg>
